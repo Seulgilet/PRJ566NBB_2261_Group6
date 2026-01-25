@@ -11,5 +11,6 @@ Instead of randomly assigning teams, it matches students based on their skills, 
 SmartMatch's goal is to create more balanced teams to improve collaboration, reduce conflicts within teams, and enhance project outcomes.
 
 ## Team Members
-- Seulgi Lee  
-- Moe Thet Paing
+- Seulgi Lee (Seulgilet)
+- Moe Thet Paing (Aron45154)
+- Yahya Osman (YahyaOsman1)

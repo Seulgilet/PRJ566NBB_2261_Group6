@@ -14,3 +14,4 @@ SmartMatch's goal is to create more balanced teams to improve collaboration, red
 - Seulgi Lee (Seulgilet)
 - Moe Thet Paing (Aron45154)
 - Yahya Osman (YahyaOsman1)
+- Jackson Pedvis (jackped12)

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #1a1a2e; }
+      .subtitle { font-size: 13px; fill: #555; font-style: italic; }
+      .entity-box { fill: #e8f4f8; stroke: #2c7da0; stroke-width: 2.5; rx: 8; }
+      .entity-label { font-size: 15px; font-weight: 700; fill: #1a1a2e; text-anchor: middle; }
+      .entity-id { font-size: 11px; fill: #2c7da0; font-weight: 600; text-anchor: middle; }
+      .process-circle { fill: #fff3e0; stroke: #e76f51; stroke-width: 3; }
+      .process-label { font-size: 16px; font-weight: 700; fill: #1a1a2e; text-anchor: middle; }
+      .process-id { font-size: 12px; fill: #e76f51; font-weight: 700; text-anchor: middle; }
+      .arrow { stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-in { stroke: #2a9d8f; }
+      .arrow-out { stroke: #e76f51; }
+      .flow-label { font-size: 11.5px; fill: #333; }
+      .flow-id { font-size: 10px; fill: #888; font-weight: 600; }
+      .legend-box { fill: #f9f9f9; stroke: #ddd; stroke-width: 1; rx: 6; }
+      .legend-text { font-size: 11px; fill: #555; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2a9d8f" />
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e76f51" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="700" fill="#fafbfd" rx="12" />
+
+  <!-- Title -->
+  <text x="550" y="40" class="title" text-anchor="middle">DFD Level 0 — Context Diagram</text>
+  <text x="550" y="60" class="subtitle" text-anchor="middle">SmartMatch Team Formation System</text>
+
+  <!-- ===================== STUDENT ENTITY (Left) ===================== -->
+  <rect x="50" y="260" width="180" height="90" class="entity-box" filter="url(#shadow)" />
+  <text x="140" y="295" class="entity-id">E1</text>
+  <text x="140" y="318" class="entity-label">Student</text>
+
+  <!-- ===================== PROCESS (Center) ===================== -->
+  <ellipse cx="550" cy="305" rx="150" ry="80" class="process-circle" filter="url(#shadow)" />
+  <text x="550" y="295" class="process-id">P0</text>
+  <text x="550" y="318" class="process-label">SmartMatch System</text>
+
+  <!-- ===================== ADMIN ENTITY (Right) ===================== -->
+  <rect x="870" y="260" width="180" height="90" class="entity-box" filter="url(#shadow)" />
+  <text x="960" y="295" class="entity-id">E2</text>
+  <text x="960" y="318" class="entity-label">Admin / Instructor</text>
+
+  <!-- ===================== ARROWS: Student → System ===================== -->
+  <!-- DF0-1 Registration Request -->
+  <line x1="230" y1="275" x2="398" y2="275" class="arrow arrow-in" marker-end="url(#arrowhead-green)" />
+  <text x="290" y="267" class="flow-id">DF0-1</text>
+  <text x="290" y="282" class="flow-label" font-weight="600">Registration Request</text>
+
+  <!-- DF0-3 Login Request -->
+  <line x1="230" y1="305" x2="398" y2="305" class="arrow arrow-in" marker-end="url(#arrowhead-green)" />
+  <text x="290" y="297" class="flow-id">DF0-3</text>
+  <text x="290" y="312" class="flow-label" font-weight="600">Login Request</text>
+
+  <!-- DF0-5 Profile Submission -->
+  <line x1="230" y1="335" x2="398" y2="335" class="arrow arrow-in" marker-end="url(#arrowhead-green)" />
+  <text x="290" y="327" class="flow-id">DF0-5</text>
+  <text x="290" y="342" class="flow-label" font-weight="600">Profile Submission/Update</text>
+
+  <!-- ===================== ARROWS: System → Student ===================== -->
+  <!-- DF0-2 Registration Confirmation -->
+  <path d="M 440 230 Q 300 160 170 230 L 140 250" class="arrow arrow-out" marker-end="url(#arrowhead-orange)" />
+  <text x="265" y="170" class="flow-id">DF0-2</text>
+  <text x="265" y="185" class="flow-label" font-weight="600">Registration Confirmation</text>
+
+  <!-- DF0-4 Auth Response -->
+  <path d="M 430 245 Q 320 210 200 245 L 175 255" class="arrow arrow-out" marker-end="url(#arrowhead-orange)" />
+  <text x="290" y="220" class="flow-id">DF0-4</text>
+  <text x="290" y="235" class="flow-label" font-weight="600">Auth Response</text>
+
+  <!-- DF0-6 Team Match Results -->
+  <path d="M 460 375 Q 310 440 180 375 L 155 355" class="arrow arrow-out" marker-end="url(#arrowhead-orange)" />
+  <text x="290" y="420" class="flow-id">DF0-6</text>
+  <text x="290" y="435" class="flow-label" font-weight="600">Team Match Results</text>
+
+  <!-- ===================== ARROWS: Admin → System ===================== -->
+  <!-- DF0-7 Matching Configuration -->
+  <line x1="870" y1="295" x2="702" y2="295" class="arrow arrow-in" marker-end="url(#arrowhead-green)" />
+  <text x="790" y="287" class="flow-id">DF0-7</text>
+  <text x="790" y="302" class="flow-label" font-weight="600">Matching Configuration</text>
+
+  <!-- ===================== ARROWS: System → Admin ===================== -->
+  <!-- DF0-8 Reports / Export -->
+  <path d="M 680 340 Q 790 400 880 340 L 910 325" class="arrow arrow-out" marker-end="url(#arrowhead-orange)" />
+  <text x="790" y="385" class="flow-id">DF0-8</text>
+  <text x="790" y="400" class="flow-label" font-weight="600">Reports / Export</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <rect x="50" y="520" width="350" height="140" class="legend-box" />
+  <text x="70" y="545" font-size="13" font-weight="700" fill="#333">Legend</text>
+
+  <rect x="70" y="558" width="40" height="20" fill="#e8f4f8" stroke="#2c7da0" stroke-width="1.5" rx="4" />
+  <text x="120" y="573" class="legend-text">External Entity</text>
+
+  <ellipse cx="90" cy="600" rx="20" ry="12" fill="#fff3e0" stroke="#e76f51" stroke-width="1.5" />
+  <text x="120" y="605" class="legend-text">Process</text>
+
+  <line x1="70" y1="628" x2="110" y2="628" stroke="#2a9d8f" stroke-width="2" marker-end="url(#arrowhead-green)" />
+  <text x="120" y="633" class="legend-text">Incoming Data Flow (to system)</text>
+
+  <line x1="70" y1="650" x2="110" y2="650" stroke="#e76f51" stroke-width="2" marker-end="url(#arrowhead-orange)" />
+  <text x="120" y="655" class="legend-text">Outgoing Data Flow (from system)</text>
+
+  <!-- ===================== DATA FLOW TABLE ===================== -->
+  <rect x="480" y="520" width="570" height="140" class="legend-box" />
+  <text x="500" y="545" font-size="13" font-weight="700" fill="#333">Data Flow Summary</text>
+  <text x="500" y="565" class="legend-text">DF0-1  Registration Request — name, email, password</text>
+  <text x="500" y="580" class="legend-text">DF0-2  Registration Confirmation — account status, message</text>
+  <text x="500" y="595" class="legend-text">DF0-3  Login Request — email, password</text>
+  <text x="500" y="610" class="legend-text">DF0-4  Auth Response — success/fail, session token</text>
+  <text x="500" y="625" class="legend-text">DF0-5  Profile Submission — skills, interests, availability</text>
+  <text x="500" y="640" class="legend-text">DF0-6  Team Match Results — team ID, members, roles</text>
+  <text x="500" y="655" class="legend-text">DF0-7  Matching Configuration — rules, constraints, weights</text>
+</svg>

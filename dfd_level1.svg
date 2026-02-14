@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 950" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #1a1a2e; }
+      .subtitle { font-size: 13px; fill: #555; font-style: italic; }
+      .entity-box { fill: #e8f4f8; stroke: #2c7da0; stroke-width: 2.5; rx: 8; }
+      .entity-label { font-size: 14px; font-weight: 700; fill: #1a1a2e; text-anchor: middle; }
+      .entity-id { font-size: 11px; fill: #2c7da0; font-weight: 600; text-anchor: middle; }
+      .process-circle { fill: #fff3e0; stroke: #e76f51; stroke-width: 2.5; }
+      .process-label { font-size: 13px; font-weight: 700; fill: #1a1a2e; text-anchor: middle; }
+      .process-id { font-size: 11px; fill: #e76f51; font-weight: 700; text-anchor: middle; }
+      .store-rect { fill: #f0faf0; stroke: #588157; stroke-width: 2; }
+      .store-bar { fill: #588157; }
+      .store-label { font-size: 12px; font-weight: 600; fill: #2d3a2d; text-anchor: middle; }
+      .store-id { font-size: 10px; fill: #588157; font-weight: 700; }
+      .arrow { stroke-width: 1.8; fill: none; }
+      .arrow-in { stroke: #2a9d8f; }
+      .arrow-out { stroke: #e76f51; }
+      .arrow-internal { stroke: #7b68ae; }
+      .arrow-store { stroke: #588157; }
+      .flow-label { font-size: 10px; fill: #333; font-weight: 600; }
+      .flow-id { font-size: 9px; fill: #999; font-weight: 600; }
+      .legend-box { fill: #f9f9f9; stroke: #ddd; stroke-width: 1; rx: 6; }
+      .legend-text { font-size: 10.5px; fill: #555; }
+    </style>
+    <marker id="ah" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#555" />
+    </marker>
+    <marker id="ah-green" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#2a9d8f" />
+    </marker>
+    <marker id="ah-orange" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#e76f51" />
+    </marker>
+    <marker id="ah-purple" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#7b68ae" />
+    </marker>
+    <marker id="ah-store" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 9 3, 0 6" fill="#588157" />
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="112%" height="112%">
+      <feDropShadow dx="1.5" dy="1.5" stdDeviation="2.5" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1300" height="950" fill="#fafbfd" rx="12" />
+
+  <!-- Title -->
+  <text x="650" y="38" class="title" text-anchor="middle">DFD Level 1 — System Decomposition</text>
+  <text x="650" y="58" class="subtitle" text-anchor="middle">SmartMatch Team Formation System — Internal Processes &amp; Data Stores</text>
+
+  <!-- ================================================================== -->
+  <!--                       EXTERNAL ENTITIES                            -->
+  <!-- ================================================================== -->
+
+  <!-- Student (top-left) -->
+  <rect x="30" y="170" width="140" height="70" class="entity-box" filter="url(#shadow)" />
+  <text x="100" y="200" class="entity-id">E1</text>
+  <text x="100" y="218" class="entity-label">Student</text>
+
+  <!-- Admin (top-right) -->
+  <rect x="1130" y="170" width="140" height="70" class="entity-box" filter="url(#shadow)" />
+  <text x="1200" y="200" class="entity-id">E2</text>
+  <text x="1200" y="218" class="entity-label">Admin / Instructor</text>
+
+  <!-- ================================================================== -->
+  <!--                          PROCESSES                                 -->
+  <!-- ================================================================== -->
+
+  <!-- P1 User Management -->
+  <ellipse cx="320" cy="180" rx="100" ry="52" class="process-circle" filter="url(#shadow)" />
+  <text x="320" y="172" class="process-id">P1</text>
+  <text x="320" y="192" class="process-label">User Management</text>
+
+  <!-- P2 Profile Management -->
+  <ellipse cx="320" cy="420" rx="100" ry="52" class="process-circle" filter="url(#shadow)" />
+  <text x="320" y="412" class="process-id">P2</text>
+  <text x="320" y="432" class="process-label">Profile Management</text>
+
+  <!-- P3 Matching Engine -->
+  <ellipse cx="650" cy="540" rx="110" ry="55" class="process-circle" filter="url(#shadow)" />
+  <text x="650" y="532" class="process-id">P3</text>
+  <text x="650" y="552" class="process-label">Matching Engine</text>
+
+  <!-- P4 Team Allocation & Publishing -->
+  <ellipse cx="650" cy="310" rx="115" ry="55" class="process-circle" filter="url(#shadow)" />
+  <text x="650" y="298" class="process-id">P4</text>
+  <text x="650" y="316" class="process-label">Team Allocation</text>
+  <text x="650" y="332" class="process-label" font-size="11">&amp; Publishing</text>
+
+  <!-- P5 Admin Controls & Reporting -->
+  <ellipse cx="1000" cy="400" rx="110" ry="55" class="process-circle" filter="url(#shadow)" />
+  <text x="1000" y="392" class="process-id">P5</text>
+  <text x="1000" y="410" class="process-label">Admin Controls</text>
+  <text x="1000" y="426" class="process-label" font-size="11">&amp; Reporting</text>
+
+  <!-- ================================================================== -->
+  <!--                         DATA STORES                                -->
+  <!-- ================================================================== -->
+
+  <!-- D1 Users DB -->
+  <g transform="translate(200, 280)">
+    <rect x="0" y="0" width="180" height="36" class="store-rect" rx="0" />
+    <rect x="0" y="0" width="30" height="36" class="store-bar" />
+    <text x="15" y="23" font-size="11" fill="white" font-weight="700" text-anchor="middle">D1</text>
+    <text x="115" y="23" class="store-label">Users DB</text>
+  </g>
+
+  <!-- D2 Profiles DB -->
+  <g transform="translate(200, 560)">
+    <rect x="0" y="0" width="180" height="36" class="store-rect" rx="0" />
+    <rect x="0" y="0" width="30" height="36" class="store-bar" />
+    <text x="15" y="23" font-size="11" fill="white" font-weight="700" text-anchor="middle">D2</text>
+    <text x="115" y="23" class="store-label">Profiles DB</text>
+  </g>
+
+  <!-- D3 Matching Rules DB -->
+  <g transform="translate(900, 560)">
+    <rect x="0" y="0" width="200" height="36" class="store-rect" rx="0" />
+    <rect x="0" y="0" width="30" height="36" class="store-bar" />
+    <text x="15" y="23" font-size="11" fill="white" font-weight="700" text-anchor="middle">D3</text>
+    <text x="115" y="23" class="store-label">Matching Rules DB</text>
+  </g>
+
+  <!-- D4 Teams DB -->
+  <g transform="translate(770, 180)">
+    <rect x="0" y="0" width="180" height="36" class="store-rect" rx="0" />
+    <rect x="0" y="0" width="30" height="36" class="store-bar" />
+    <text x="15" y="23" font-size="11" fill="white" font-weight="700" text-anchor="middle">D4</text>
+    <text x="115" y="23" class="store-label">Teams DB</text>
+  </g>
+
+  <!-- ================================================================== -->
+  <!--                         DATA FLOWS                                 -->
+  <!-- ================================================================== -->
+
+  <!-- DF1-1: Student → P1 (Registration/Login) -->
+  <line x1="170" y1="195" x2="218" y2="188" class="arrow arrow-in" marker-end="url(#ah-green)" />
+  <text x="175" y="178" class="flow-id">DF1-1</text>
+  <text x="175" y="168" class="flow-label">Registration / Login</text>
+
+  <!-- DF1-2: P1 ↔ D1 Users DB -->
+  <line x1="300" y1="232" x2="295" y2="278" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="258" y="260" class="flow-id">DF1-2</text>
+  <text x="258" y="250" class="flow-label">User Record</text>
+
+  <!-- DF1-3: Student → P2 (Profile Data) -->
+  <path d="M 100 240 L 100 410 L 218 415" class="arrow arrow-in" marker-end="url(#ah-green)" />
+  <text x="108" y="380" class="flow-id">DF1-3</text>
+  <text x="108" y="370" class="flow-label">Profile Data</text>
+
+  <!-- DF1-4: P2 ↔ D2 Profiles DB -->
+  <line x1="305" y1="472" x2="298" y2="558" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="262" y="520" class="flow-id">DF1-4</text>
+  <text x="262" y="510" class="flow-label">Profile Write/Read</text>
+
+  <!-- DF1-5: Admin → P5 (Rule Configuration) -->
+  <line x1="1175" y1="240" x2="1050" y2="355" class="arrow arrow-in" marker-end="url(#ah-green)" />
+  <text x="1088" y="280" class="flow-id">DF1-5</text>
+  <text x="1088" y="270" class="flow-label">Rule Config</text>
+
+  <!-- DF1-6: P5 ↔ D3 Matching Rules DB -->
+  <line x1="1000" y1="455" x2="1000" y2="558" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="1008" y="510" class="flow-id">DF1-6</text>
+  <text x="1008" y="500" class="flow-label">Rules Write/Read</text>
+
+  <!-- DF1-7: P3 ← D2 Profiles DB (Profile Retrieval) -->
+  <line x1="380" y1="578" x2="538" y2="555" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="430" y="575" class="flow-id">DF1-7</text>
+  <text x="430" y="586" class="flow-label">Profile Retrieval</text>
+
+  <!-- DF1-8: P3 ← D3 Matching Rules DB (Rules Retrieval) -->
+  <line x1="900" y1="578" x2="762" y2="555" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="825" y="586" class="flow-id">DF1-8</text>
+  <text x="815" y="575" class="flow-label">Rules Retrieval</text>
+
+  <!-- DF1-9: P3 → P4 (Match Candidates) -->
+  <line x1="650" y1="485" x2="650" y2="367" class="arrow arrow-internal" marker-end="url(#ah-purple)" />
+  <text x="658" y="440" class="flow-id">DF1-9</text>
+  <text x="658" y="428" class="flow-label">Match Candidates</text>
+
+  <!-- DF1-10: P4 → D4 Teams DB -->
+  <line x1="730" y1="270" x2="790" y2="218" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="736" y="252" class="flow-id">DF1-10</text>
+  <text x="720" y="240" class="flow-label">Team Record Write</text>
+
+  <!-- DF1-11: Student → P4 (View Results Request) -->
+  <path d="M 100 240 Q 100 310 535 310" class="arrow arrow-in" marker-end="url(#ah-green)" />
+  <text x="300" y="330" class="flow-id">DF1-11</text>
+  <text x="300" y="342" class="flow-label">View Results Request</text>
+
+  <!-- DF1-12: P4 → Student (Team Match Results) -->
+  <path d="M 535 290 Q 300 250 170 210" class="arrow arrow-out" marker-end="url(#ah-orange)" />
+  <text x="340" y="260" class="flow-id">DF1-12</text>
+  <text x="340" y="252" class="flow-label">Team Match Results</text>
+
+  <!-- DF1-13: Admin → P5 (Report Request) -->
+  <path d="M 1200 240 L 1200 390 L 1112 395" class="arrow arrow-in" marker-end="url(#ah-green)" />
+  <text x="1208" y="330" class="flow-id">DF1-13</text>
+  <text x="1208" y="320" class="flow-label">Report Request</text>
+
+  <!-- DF1-14: P5 → D4 Teams DB (Team Data Retrieval) -->
+  <path d="M 960 348 Q 920 260 900 218" class="arrow arrow-store" marker-end="url(#ah-store)" />
+  <text x="908" y="280" class="flow-id">DF1-14</text>
+  <text x="908" y="268" class="flow-label">Team Data Retrieval</text>
+
+  <!-- DF1-15: P5 → Admin (Reports / Export) -->
+  <path d="M 1060 360 Q 1100 300 1150 240" class="arrow arrow-out" marker-end="url(#ah-orange)" />
+  <text x="1112" y="300" class="flow-id">DF1-15</text>
+  <text x="1098" y="290" class="flow-label">Reports / Export</text>
+
+  <!-- ================================================================== -->
+  <!--                           LEGEND                                   -->
+  <!-- ================================================================== -->
+  <rect x="30" y="670" width="1240" height="110" class="legend-box" />
+  <text x="55" y="695" font-size="13" font-weight="700" fill="#333">Legend</text>
+
+  <!-- Entity -->
+  <rect x="55" y="710" width="30" height="18" fill="#e8f4f8" stroke="#2c7da0" stroke-width="1.5" rx="3" />
+  <text x="92" y="724" class="legend-text">External Entity</text>
+
+  <!-- Process -->
+  <ellipse cx="235" cy="719" rx="16" ry="10" fill="#fff3e0" stroke="#e76f51" stroke-width="1.5" />
+  <text x="258" y="724" class="legend-text">Process</text>
+
+  <!-- Data Store -->
+  <rect x="340" y="710" width="50" height="18" fill="#f0faf0" stroke="#588157" stroke-width="1.5" />
+  <rect x="340" y="710" width="12" height="18" fill="#588157" />
+  <text x="398" y="724" class="legend-text">Data Store</text>
+
+  <!-- Arrow types -->
+  <line x1="520" y1="719" x2="555" y2="719" stroke="#2a9d8f" stroke-width="2" marker-end="url(#ah-green)" />
+  <text x="563" y="724" class="legend-text">Entity → Process</text>
+
+  <line x1="690" y1="719" x2="725" y2="719" stroke="#e76f51" stroke-width="2" marker-end="url(#ah-orange)" />
+  <text x="733" y="724" class="legend-text">Process → Entity</text>
+
+  <line x1="860" y1="719" x2="895" y2="719" stroke="#7b68ae" stroke-width="2" marker-end="url(#ah-purple)" />
+  <text x="903" y="724" class="legend-text">Process → Process</text>
+
+  <line x1="1040" y1="719" x2="1075" y2="719" stroke="#588157" stroke-width="2" marker-end="url(#ah-store)" />
+  <text x="1083" y="724" class="legend-text">Store Read/Write</text>
+
+  <!-- Core flow summary -->
+  <text x="55" y="762" class="legend-text" font-style="italic">
+    Core Flow: Student ↔ P1 ↔ D1  |  Student ↔ P2 ↔ D2  |  Admin ↔ P5 ↔ D3  |  P3 reads D2 + D3 → P4 → D4  |  P4 → Student  |  P5 reads D4 → Admin
+  </text>
+</svg>

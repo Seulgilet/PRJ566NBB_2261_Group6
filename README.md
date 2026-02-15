@@ -15,3 +15,4 @@ SmartMatch's goal is to create more balanced teams to improve collaboration, red
 - Moe Thet Paing (Aron45154)
 - Yahya Osman (YahyaOsman1)
 - Jackson Pedvis (jackped12)
+- Rohit Sivakumar (RohitSiva2004)
